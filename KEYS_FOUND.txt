@@ -1,0 +1,70 @@
+# АНАЛИЗ ПРИЛОЖЕНИЯ И НАЙДЕННЫЕ КЛЮЧИ
+
+## Информация о приложении:
+- Имя файла: Myapps.apk
+- Размер: ~528KB
+- Использует упаковщик: dpt-shell
+- Защита: libantidebug.so
+
+## Найденные строки похожие на ключи в classes.dex:
+
+### Возможные ключи (формат Il0O...):
+Il0OIl0O0O0O0O0O
+Il0OIl0O0O0OIlIl
+Il0OIl0O0OIl0OIl
+Il0OIl0O5S5S5S5S
+Il0OIl0OIl0OIl0O
+Il0OIl0OIlIl0O0O
+Il0OIl0OIlIlIlIl
+Il0OIl0OO0O0O0O0
+Il0OIl0OO0O0lIlI
+Il0OIl0OO0lI0OlI
+Il0OIl0OS5S5S5S5
+Il0OIl0OlIO0lIO0
+Il0OIl0OlIlIO0O0
+Il0OIl0OlIlIlIlI
+
+### Дополнительные ключи (формат 0O...):
+0O0O0O0O0O0O0O0O
+0O0O0O0O0O0O0O0O0O0O0O0O
+0O0O0O0O0O0O0O0O5S5S5S5S
+0O0O0O0O0O0O0O0OO0O0O0O0
+0O0O0O0O0O0O0O0OS5S5S5S5
+0O0O0O0O5S5S5S5S
+0O0O0O0O5S5S5S5S0O0O0O0O
+0O0O0O0O5S5S5S5S5S5S5S5S
+0O0O0O0O5S5S5S5SO0O0O0O0
+0O0O0O0O5S5S5S5SS5S5S5S5
+0O0O0O0OO0O0O0O0
+0O0O0O0OO0O0O0O00O0O0O0O
+0O0O0O0OO0O0O0O05S5S5S5S
+0O0O0O0OO0O0O0O0O0O0O0O0
+0O0O0O0OO0O0O0O0S5S5S5S5
+0O0O0O0OS5S5S5S5
+0O0O0O0OS5S5S5S50O0O0O0O
+0O0O0O0OS5S5S5S55S5S5S5S
+0O0O0O0OS5S5S5S5O0O0O0O0
+0O0O0O0OS5S5S5S5S5S5S5S5
+
+## Найденные классы проверки:
+- com/mycompany/myndkapp2/SignatureChecker
+  - Методы:
+    - checkKey
+    - decryptKey
+    - getMasterKey
+    - validateLicense
+
+## Структура приложения:
+- Основное приложение упаковано с помощью dpt-shell
+- Реальный код находится в:
+  - assets/vwwwwwvwww/arm64/libd1b98aadffdc1f09.so (упакованный dex)
+  - assets/np/* (множество зашифрованных файлов)
+
+## Рекомендации:
+1. Распаковать dpt-shell защиту
+2. Извлечь реальный DEX из native библиотеки
+3. Анализировать SignatureChecker класс
+
+## Примечание из pro.txt:
+"Это приложение чистт для обучения, это приложение созданоо для кряка
+ как разработчик приложения говорю что приложение полностью можно крякать
